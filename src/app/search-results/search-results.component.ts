@@ -6,9 +6,14 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
+@Input() buttonPushed:string;
+@Input() allSearches:string[]=[] ;
+
+
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
+
+
 }

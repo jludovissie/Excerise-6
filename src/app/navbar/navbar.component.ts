@@ -6,8 +6,17 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  collapsed=false; 
+  searchQuery='' ;
+  allSearches= [] ;
+
+  @Output () buttonPushed = new EventEmitter<string>() ; 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  onSelect() {
+    this.buttonPushed.emit(this.searchQuery)
   }
+
+ 
 }
